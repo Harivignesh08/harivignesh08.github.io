@@ -5,113 +5,150 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hari Vignesh | Portfolio</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
 <style>
 body {
     margin: 0;
-    font-family: Arial;
+    font-family: 'Poppins', sans-serif;
     background: #0f172a;
     color: white;
+    scroll-behavior: smooth;
 }
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: #020617;
+    position: sticky;
+    top: 0;
+}
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+/* HERO */
 header {
     text-align: center;
-    padding: 50px;
-    background: #1e293b;
+    padding: 80px 20px;
 }
+header h1 {
+    font-size: 48px;
+}
+header p {
+    color: #38bdf8;
+}
+
+/* SECTIONS */
 section {
-    padding: 40px;
-}
-.card {
-    background: #1e293b;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 10px;
+    padding: 60px 10%;
 }
 h2 {
     color: #38bdf8;
 }
-a {
-    color: #38bdf8;
+
+/* CARDS */
+.card {
+    background: #1e293b;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #38bdf8;
+    color: black;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+<nav>
+    <div><b>Hari Vignesh</b></div>
+    <div>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- HERO -->
 <header>
     <h1>Hari Vignesh</h1>
     <p>MCA Student | AI | Machine Learning | Generative AI</p>
+    <a href="#" class="btn">Download Resume</a>
 </header>
 
-<section>
+<!-- ABOUT -->
+<section id="about">
 <h2>About Me</h2>
 <div class="card">
 <p>
 MCA student at VIT Vellore with strong foundations in Python, Data Structures,
-Algorithms, and Machine Learning. Passionate about Generative AI, LLMs, and
-building intelligent systems using modern technologies.
+Algorithms, and Machine Learning. Passionate about Generative AI, LLMs,
+and building intelligent AI systems.
 </p>
 </div>
 </section>
 
-<section>
-<h2>Skills</h2>
-<div class="card">
-<p><b>Languages:</b> Python, Java, C, C++</p>
-<p><b>AI/ML:</b> Regression, Classification, Clustering, LLMs, RAG</p>
-<p><b>Frameworks:</b> Django, Flask</p>
-<p><b>Web:</b> HTML, CSS, JavaScript</p>
-<p><b>Database:</b> MySQL, SQL, Vector DB</p>
-<p><b>Core:</b> Data Structures, Algorithms, OOP</p>
-</div>
-</section>
-
-<section>
+<!-- PROJECTS -->
+<section id="projects">
 <h2>Projects</h2>
 
 <div class="card">
-<h3>🚗 Car Pooling System (Django)</h3>
+<h3>🧠 Lung Cancer Detection (AI Project)</h3>
 <p>
-Built a full-stack web application with authentication, booking workflows,
-and optimized database schema. Improved backend performance using modular design.
+Built a deep learning model using UNet++ with EfficientNet encoder for detecting
+lung nodules from CT scan images (LIDC-IDRI dataset). Integrated Explainable AI
+for better interpretability.
 </p>
 </div>
 
 <div class="card">
-<h3>🎬 Movie Booking System (Java)</h3>
-<p>
-Developed GUI-based application using JavaFX with seat allocation,
-scheduling, and booking logic. Applied OOP principles for scalability.
-</p>
+<h3>🚗 Car Pooling System</h3>
+<p>Django-based full-stack app with authentication and booking workflows.</p>
 </div>
 
 <div class="card">
-<h3>🤖 GenAI Chatbot using RAG</h3>
-<p>
-Built a chatbot using Retrieval-Augmented Generation with LLM API integration,
-vector embeddings, and semantic search using Python and Flask.
-</p>
+<h3>🤖 GenAI Chatbot (RAG)</h3>
+<p>Developed chatbot using LLM + vector search for intelligent responses.</p>
 </div>
 
 </section>
 
-<section>
-<h2>Education</h2>
+<!-- SKILLS -->
+<section id="skills">
+<h2>Skills</h2>
 <div class="card">
-<p><b>MCA</b> – VIT Vellore (CGPA: 7.73)</p>
-<p><b>BCA</b> – Sourashtra College (CGPA: 8.17)</p>
-<p>Class XII: 66.4% | Class X: 68.2%</p>
+<p>Python • Java • C • C++ • Machine Learning • Deep Learning • Django • Flask • SQL</p>
 </div>
 </section>
 
-<section>
-<h2>Achievements</h2>
-<div class="card">
-<p>• Solved problems on LeetCode and HackerRank</p>
-<p>• Continuously learning AI & Machine Learning</p>
-</div>
-</section>
-
-<section>
+<!-- CONTACT -->
+<section id="contact">
 <h2>Contact</h2>
 <div class="card">
 <p>Email: hari008vignesh@gmail.com</p>
@@ -120,7 +157,7 @@ vector embeddings, and semantic search using Python and Flask.
 </div>
 </section>
 
-<footer style="text-align:center;padding:20px;background:#1e293b;">
+<footer>
 <p>© 2026 Hari Vignesh</p>
 </footer>
 
